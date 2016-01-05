@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A few Questions</title>
+  </head>
+  <body>
+    <h2>I hope these three questions help you get to know me better.</h2>
+
+    <script>
+      var user = prompt('Hi, what is your name?');
+      console.log('The user\'s name is: ' + user);
+      alert('Greetings, ' + user + ' nice to meet you! I want to play a game, involving asking questions, to help you get to know me.');
+
+      var question1 = prompt(user + ' to answer these questions, please type Y for yes or N for no. My first question is am I a native Washingtonian?');
+      console.log('The user response to the first question is: '+ question1);
+      if (question1 == "Y"){
+        alert('Good job ' + user + ' you got it right!');
+      } else {
+        alert('Good guess ' + user + ', but you got it wrong!');
+      }
+
+      var question2 = prompt(user + ' my second question is, do I drive when commuting to school?');
+      console.log('The user response to the second question is: '+ question2);
+      if (question2 == "N"){
+        alert('Correct ' + user + ' you got it right, I take the train instead.');
+      } else {
+        alert(user + ', you got it wrong!');
+      }
+
+      var question3 = prompt('My third question is, did I decide to do Code Fellows while on a beach in Maui?');
+      console.log('The user response to the third question is: '+ question3);
+      if (question3 == "Y"){
+        alert('You got it right! I had an epiphany when I was in Maui two months ago. A good friend talked me into making a life change.');
+      } else {
+        alert('You got it wrong ' + user);
+      }
+      var numberGuess = prompt('Ok, ' + user + '! I have a bonus question. Can you guess my lucky number?');
+      console.log('The user response to the bonus question is: ' + numberGuess);
+      if (numberGuess == "7") {
+        alert('You got it right! I had an epiphany when I was in Maui two months ago. A good friend talked me into making a life change.');
+      } if (numberGuess < 7){
+          alert('Your guess was too low');
+      } else {
+          alert('Your guess was too high');
+      }
+
+    </script>
+  </body>
+</html>
