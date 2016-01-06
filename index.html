@@ -38,20 +38,20 @@
       } else {
         alert('You got it wrong ' + user);
       }
-      var numberGuess = prompt('This is a bonus question. Can you guess my lucky number?');
-      var bonusCounter = 0;
-      console.log('The user response to the bonus question is: ' + numberGuess);
-      while (numberGuess > 7 || numberGuess < 7) {
-        bonusCounter += 1;
-        if (numberGuess < 7) {
-          alert('Your guess was too low.');
-        } else {
-          alert('Your guess was too high.');
-        }
-        prompt('guess again!');
+
+      var question4 = prompt('Can you guess the number I\'m thinking of?');
+      console.log('The user response to the fourth question is: '+ question4);
+      if (question4 < '8') {
+        alert('Your guess was too low');
+      } else if (question4 > '8') {
+        alert('Your guess was too high.');
+      } else {
+        alert('You got it right!');
+        counter += 1;
       }
 
-      alert('You got ' + counter + '/3 questions correct. It took you ' + bonusCounter + ' number of tries to guess the bonus question.')
+    alert('You got ' + counter + ' out of 4 questions correct.');
+
     </script>
   </body>
 </html>
