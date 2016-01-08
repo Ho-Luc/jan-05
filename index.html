@@ -5,53 +5,16 @@
   </head>
   <body>
     <h2>I hope these three questions help you get to know me better.</h2>
-
-    <script>
-      var user = prompt('Hi, what is your name?');
-      var counter = 0;
-      console.log('The user\'s name is: ' + user);
-      alert('Greetings, ' + user + ' nice to meet you! I want to play a game, involving asking questions, to help you get to know me.');
-
-      var question1 = prompt(user + ' to answer these questions, type yes or no. My first question is am I a native Washingtonian?');
-      console.log('The user response to the first question is: '+ question1);
-      if (question1.toUpperCase() === "Y" || question1.toUpperCase() === 'YES'){
-        alert('Good job ' + user + ' you got it right!');
-        counter += 1;
-      } else {
-        alert('Good guess ' + user + ', but you got it wrong!');
-      }
-
-      var question2 = prompt(user + ' my second question is, do I drive when commuting to school?');
-      console.log('The user response to the second question is: '+ question2);
-      if (question2.toUpperCase() === "N" || question2.toUpperCase() === 'NO') {
-        alert('Correct ' + user + ' you got it right, I take the train instead.');
-        counter += 1;
-      } else {
-        alert(user + ', you got it wrong!');
-      }
-
-      var question3 = prompt('My third question is, did I decide to do Code Fellows while on a beach in Maui?');
-      console.log('The user response to the third question is: '+ question3);
-      if (question3.toUpperCase() === "Y" || question3.toUpperCase() === 'YES'){
-        alert('You got it right! I had an epiphany when I was in Maui two months ago. A good friend talked me into making a life change.');
-        counter += 1;
-      } else {
-        alert('You got it wrong ' + user);
-      }
-
-      var question4 = prompt('Can you guess the number I\'m thinking of?');
-      console.log('The user response to the fourth question is: '+ question4);
-      if (question4 < '8') {
-        alert('Your guess was too low');
-      } else if (question4 > '8') {
-        alert('Your guess was too high.');
-      } else {
-        alert('You got it right!');
-        counter += 1;
-      }
-
-    alert('You got ' + counter + ' out of 4 questions correct.');
-
+    <p id="resultOne"></p>
+    <h2>Do I drive when commuting to school?</h2>
+    <p id="resultTwo"></p>
+    <h2>Did I decide to do Code Fellows while on a beach in Maui?</h2>
+    <p id="resultThree"></p>
+    <h2>Guessing game:</h2>
+    <p id="resultFour"></p>
+    <h2>totalCorrect:</h2>
+    <p id="totalCorrect"></p>
+    <script src="ho-luc-app.js">
     </script>
   </body>
 </html>
