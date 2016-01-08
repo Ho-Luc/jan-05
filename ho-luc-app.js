@@ -11,7 +11,6 @@ var counter = 0;
 console.log('The user\'s name is: ' + user);
 alert('Greetings, ' + user + ' nice to meet you! I want to play a game, involving asking questions, to help you get to know me.');
 
-//This is the data for the questions:
 
 var quesData = [
   //question 1
@@ -23,48 +22,39 @@ var quesData = [
   ]
 
 function questions() {
-var question1 = prompt(quesData[i][0]);
-console.log('The user response to the first question is: '+ question1);
-if (question1.toUpperCase() === quesData[i][1] || question1.toUpperCase() === quesData[i][2]){
-  //alert('Good job ' + user + ' you got it right!');
-  quesData[i][5].textContent = quesData[i][3];
-  counter += 1;
-} else {
-  //alert('Good guess ' + user + ', but you got it wrong!');
-  quesData[i][5].textContent = quesData[i][4];
- };
+  var question1 = prompt(quesData[i][0]);
+  console.log('The user response to the first question is: '+ question1);
+  if (question1.toUpperCase() === quesData[i][1] || question1.toUpperCase() === quesData[i][2]){
+    quesData[i][5].textContent = quesData[i][3];
+    counter += 1;
+  } else {
+    quesData[i][5].textContent = quesData[i][4];
+  };
 }
 
 for (var i = 0; i < quesData.length; i++) {
   questions();
 }
 
-
 var guessNumber = false;
 function fourthQuestion () {
   while (guessNumber === false) {
-var question4 = prompt('Can you guess the number I\'m thinking of?');
-console.log('The user response to the fourth question is: '+ question4);
-question4 = parseInt(question4);
-if (question4 < 8) {
-  //alert('Your guess was too low');
-  resultFour.textContent = 'Your guess was too low';
-} else if (question4 > 8) {
-  //alert('Your guess was too high.');
-  resultFour.textContent = 'Your guess was too high.';
-} else {
-  //alert('You got it right!');
-  resultFour.textContent = 'You got it right!';
-  guessNumber = true;
-  counter += 1;
-};
+    var question4 = prompt('Can you guess the number I\'m thinking of?');
+    console.log('The user response to the fourth question is: '+ question4);
+    question4 = parseInt(question4);
+    if (question4 < 8) {
+      resultFour.textContent = 'Your guess was too low';
+    } else if (question4 > 8) {
+      resultFour.textContent = 'Your guess was too high.';
+    } else {
+      resultFour.textContent = 'You got it right!';
+      guessNumber = true;
+      counter += 1;
+    }
+  }
 }
-}
-
 fourthQuestion();
 
-
 totalCorrect.textContent = 'You got ' + counter + ' out of 4 questions correct.';
-//alert('You got ' + counter + ' out of 4 questions correct.');
 }
 guessingGame();
