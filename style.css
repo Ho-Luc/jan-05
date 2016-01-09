@@ -1,0 +1,19 @@
+* {
+  background-color: CadetBlue;
+}
+
+h2 {
+  color: black;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+.head {
+    color: blueViolet;
+}

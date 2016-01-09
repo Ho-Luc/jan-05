@@ -6,4 +6,8 @@ Updated Readme, January 8th:
 
 These are the updates to Luc's page that I've made.  I put his first three questions into and array and then called on this array with a function.  We also put a final loop into his final question.
 
+Further Update!!!!!
+
+Added coloring according to correct and incorrect answers.  Also added some additional CSS styling.
+
 -Sam Gruse
