@@ -8,6 +8,9 @@ var totalCorrect = document.getElementById('totalCorrect')
 
 var user = prompt('Hi, what is your name?');
 var counter = 0;
+var newName = document.getElementById('newUser');
+newName.textContent = 'Hello ' + user + ' welcome to my game!';
+newName.className = 'head';
 console.log('The user\'s name is: ' + user);
 alert('Greetings, ' + user + ' nice to meet you! I want to play a game, involving asking questions, to help you get to know me.');
 
@@ -22,14 +25,18 @@ var quesData = [
   ]
 
 function questions() {
-  var question1 = prompt(quesData[i][0]);
-  console.log('The user response to the first question is: '+ question1);
-  if (question1.toUpperCase() === quesData[i][1] || question1.toUpperCase() === quesData[i][2]){
-    quesData[i][5].textContent = quesData[i][3];
-    counter += 1;
-  } else {
-    quesData[i][5].textContent = quesData[i][4];
-  };
+var question1 = prompt(quesData[i][0]);
+console.log('The user response to the first question is: '+ question1);
+if (question1.toUpperCase() === quesData[i][1] || question1.toUpperCase() === quesData[i][2]){
+  //alert('Good job ' + user + ' you got it right!');
+  quesData[i][5].textContent = quesData[i][3];
+  quesData[i][5].className = 'correct';
+  counter += 1;
+} else {
+  //alert('Good guess ' + user + ', but you got it wrong!');
+  quesData[i][5].textContent = quesData[i][4];
+  quesData[i][5].className = 'wrong';
+ };
 }
 
 for (var i = 0; i < quesData.length; i++) {
@@ -52,6 +59,7 @@ function fourthQuestion () {
       counter += 1;
     }
   }
+
 }
 fourthQuestion();
 
